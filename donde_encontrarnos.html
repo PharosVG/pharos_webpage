@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dónde encontrarnos - Pharos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<style>
+    /* Sección principal */
+.home-donde {
+    background-image: url("assets/campo_futbol.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px; 
+    padding-bottom: 100px; 
+}
+
+
+    /* Contenedor centralizado */
+    .donde-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 3rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /* se adapta en pantallas pequeñas */
+    }
+
+    /* Mapa */
+    .donde-mapa {
+        flex: 1;
+        min-width: 300px;
+        height: 400px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    /* Texto */
+    .donde-texto {
+        flex: 1;
+        min-width: 300px;
+        background-color: rgba(26, 54, 66, 0.7);
+        /* overlay oscuro para resaltar texto */
+        padding: 2rem;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Títulos dentro del texto */
+    .donde-texto h3 {
+        margin-top: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .donde-container {
+            flex-direction: column;
+        }
+
+        .donde-mapa,
+        .donde-texto {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <a href="home.html">
+                <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="terapias.html">Terapias</a></li>
+                <li><a href="talleres.html">Talleres</a></li>
+                <!-- <li>
+                    <button aria-label="Abrir menú" class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </li>
+            -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-donde">
+            <div class="donde-container">
+
+                <!-- Mapa de Google -->
+                <div class="donde-mapa">
+                    <!-- Aquí insertas el iframe de Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.4477007601668!2d2.207234400000011!3d41.451204199999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bc8d96e0e7ff%3A0x5c63aa05ce6525b0!2sPasseig%20de%20Lloren%C3%A7%20Serra%2C%208%2C%2008921%20Santa%20Coloma%20de%20Gramenet%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1762988706187!5m2!1ses!2ses"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Texto con dirección e indicaciones -->
+                <div class="donde-texto">
+                    <h3>Dirección</h3>
+                    <p>Passeig de Llorenç Serra, 8</p>
+                    <p>08921 Santa Coloma de Gramenet</p>
+
+                    <h3>¿Cómo llegar?</h3>
+                    <p>Metro: L1 Estación Santa Coloma o L9 Norte Església Major</p>
+                    <p>Autobús: B14 Pg. Llorenç Serra/ Av. Francesc Macià</p>
+                    <p>Autobuses metropolitanos: M27, M28</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li>
+                    <a href="https://wa.me/34681013942" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        +34 681 013 942
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:pharos.vg@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        pharos.vg@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/pharos_vg" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        @pharos_vg
+                    </a>
+                </li>
+            </ul>
+            <p class="footer-copy">2025 · Pharos, centro de psicología</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

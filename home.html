@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Pharos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<style>
+    /* Estilo general */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+        background-color: #3D6E8A;
+        /* mismo azul que home-ofrecemos */
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*HOME */
+
+    /*Section 1 Home - Pharos Foco en lo esencial*/
+
+    .home-hero {
+        background-image: url('assets/faro_home.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #F7F1E8;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .home-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    h1.hero-titulo {
+        font-weight: normal;
+        font-size: 38pt;
+        margin-bottom: auto;
+    }
+
+    .hero-container {
+        padding: 100px;
+        width: 50%;
+        z-index: 2;
+    }
+
+
+    p.hero-big-text {
+        font-size: 23px;
+        margin-top: 5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .btn-hero {
+        background-color: transparent;
+        color: #F7F1E8;
+        padding: 0.5rem 2rem;
+        border-radius: 9px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid #F7F1E8;
+    }
+
+    .btn-hero:hover {
+        background-color: rgba(247, 241, 232, 0.9);
+        color: #3D6E8A;
+    }
+
+
+    /*Section 2 Home -En Pharos te ofrecemos...*/
+
+
+    .home-ofrecemos {
+        background-color: #3D6E8A;
+        /* fondo azul medio */
+        color: #F7F1E8;
+        /* texto blanco cálido */
+        padding: 5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ofrecemos-container {
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* --- Títulos --- */
+    .ofrecemos-container h2 {
+        font-weight: normal;
+        font-size: 25pt;
+    }
+
+    .ofrecemos-container h3 {
+        font-weight: normal;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        color: #F7F1E8;
+        opacity: 0.9;
+    }
+
+    /* --- Listas de botones --- */
+    .ofrecemos-container ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* --- Botones base --- */
+    .ofrecemos-container button {
+        border: none;
+        color: #F7F1E8;
+        padding: 0.9rem 1.8rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.3s ease;
+    }
+
+    /* --- Colores específicos --- */
+    .btn-rosa {
+        background-color: #AD8C9A;
+    }
+
+    .btn-verde {
+        background-color: #2F5B4C;
+    }
+
+    .btn-marron {
+        background-color: #9E5E41;
+    }
+
+    /* --- Efecto hover --- */
+    .ofrecemos-container button:hover {
+        transform: translateY(-3px);
+        opacity: 0.9;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+        .ofrecemos-container ul {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .ofrecemos-container button {
+            width: 100%;
+        }
+    }
+
+
+    /*Section 3 Home - ¿Por qué somos tu mejor opción?*/
+
+    .home-opcion {
+        background-color: #3D6E8A;
+        padding: 5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opcion-container {
+        max-width: 900px;
+        background-color: #F7F1E8;
+        /* blanco cálido */
+        border-radius: 15px;
+        /* bordes redondeados */
+        padding: 3rem 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        /* sutil sombra */
+        text-align: left;
+    }
+
+    .home-opcion h2 {
+        color: #1A3642;
+        /* azul oscuro del footer */
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-opcion ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-opcion li p {
+        color: #1A3642;
+        /* azul oscuro */
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /*Section 4 Home - Cita de Frank*/
+    .home-final {
+        background-color: #3D6E8A;
+        /* fondo azul */
+        color: #F7F1E8;
+        padding: 5rem 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .final-container {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* Título arriba, en cursiva */
+    .final-titulo {
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .final-container h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Contenedor horizontal para texto1 - imagen - lista */
+    .final-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    /* Texto 1 alineado a la derecha */
+    .texto1 {
+        flex: 1;
+        text-align: right;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Imagen centrada */
+    .imagen {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px;
+        max-width: 36%;
+    }
+
+    img {
+        max-width: inherit;
+    }
+
+    /* Lista alineada a la izquierda, sin bullets */
+    .final-lista {
+        flex: 1;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .final-lista li {
+        font-size: 1rem;
+    }
+
+    /* Responsive para móvil */
+    @media (max-width: 900px) {
+        .final-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .texto1,
+        .imagen,
+        .final-lista {
+            text-align: center;
+        }
+
+        .final-lista {
+            gap: 0.5rem;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <a href="home.html">
+                <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="terapias.html">Terapias</a></li>
+                <li><a href="talleres.html">Talleres</a></li>
+                <!-- <li>
+                    <button aria-label="Abrir menú" class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </li>
+            -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="hero-container">
+                <h1 class="hero-titulo">Foco en lo esencial</h1>
+                <p class="hero-mini-text">Te acompañamos para que puedas alcanzar tu mejor versión, sin ruido.</p>
+                <p class="hero-big-text">
+                    Creamos un espacio <strong> cálido</strong> y
+                    <strong> seguro</strong> donde parar, poner en palabras
+                    lo que sentimos y recuperar la <strong>dirección</strong>.
+                </p>
+                <a class="btn-hero" href="contacto.html">Contáctanos</a>
+            </div>
+        </section>
+
+        <section class="home-ofrecemos">
+            <div class="ofrecemos-container">
+                <h2 class="ofrecemos-titulo">En Pharos te ofrecemos...</h2>
+                <h3>Terapias</h3>
+                <ul>
+                    <li><button class="btn-rosa">Infanto-juvenil</button></li>
+                    <li><button class="btn-rosa">Adulto/a</button></li>
+                    <li><button class="btn-rosa">Parejas</button></li>
+                    <li><button class="btn-rosa">Sexología</button></li>
+                    <li><button class="btn-rosa">Drogodependencia</button></li>
+                    <li><button class="btn-verde">Deportiva</button></li>
+                </ul>
+                <h3>Talleres</h3>
+                <ul>
+                    <li><button class="btn-marron">Lorem Ipsum</button></li>
+                    <li><button class="btn-marron">Lorem Ipsum</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home-opcion">
+            <div class="opcion-container">
+                <h2>¿Por qué somos tu mejor opción?</h2>
+                <ul>
+                    <li>
+                        <p><strong>✓ </strong>Te ofrecemos un espacio seguro donde poder expresarse sin miedos.</p>
+                    </li>
+                    <li>
+                        <p><strong>✓ </strong>Priorizamos la transparencia, la cercanía y la calidez, para tu comodidad.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>✓ </strong>Te ayudamos a transformar las dificultades en oportunidades de mejora.</p>
+                    </li>
+                    <li>
+                        <p><strong>✓ </strong>Te acompañamos a encontrar equilibrio en tu vida y potenciar tus
+                            fortalezas.</p>
+                    </li>
+                    <li>
+                        <p><strong>✓ </strong>Combinamos psicología clínica y deportiva en un mismo espacio.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home-final">
+            <div class="final-container">
+                <h2 class="final-titulo">
+                    "Cuando ya no podemos cambiar una <strong>situación</strong>,
+                    tenemos el desafío de cambiarnos a <strong>nosotros</strong> mismos."
+                </h2>
+                <h3>Viktor <strong>Frank</strong></h3>
+
+                <div class="faro-zona">
+                    <div class="final-content">
+                        <p class="texto1">
+                            Centro de soporte psicológico para infantes,
+                            jóvenes, adultos y deportistas. Ayuda y apoyo en
+                            el crecimiento y el rendimiento deportivo.
+                        </p>
+                        <div class="imagen">
+                            <img src="assets/logo_Blanco_faro.png" alt="Imagen del Faro">
+                        </div>
+
+                        <ul class="final-lista">
+                            <li>Terapias</li>
+                            <li>Talleres</li>
+                            <li>Quiénes somos</li>
+                            <li>Dónde encontrarnos</li>
+                            <li>Contacto</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li>
+                    <a href="https://wa.me/34681013942" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        +34 681 013 942
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:pharos.vg@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        pharos.vg@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/pharos_vg" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        @pharos_vg
+                    </a>
+                </li>
+            </ul>
+            <p class="footer-copy">2025 · Pharos, centro de psicología</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

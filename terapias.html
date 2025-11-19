@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terapias - Pharos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+    <style>
+        /* Contenedor general del carrusel */
+        .carrusel-container {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Cada slide */
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            /* fuera de pantalla por defecto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            background-size: cover;
+            background-position: center;
+            transition: left 0.5s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Slide activo */
+        .slide.active {
+            left: 0;
+        }
+
+        /* Título grande */
+        .slide h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Botón */
+        .slide .btn-hero {
+            background-color: #AD8C9A;
+            /* rosa ejemplo, cambia según quieras */
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .slide .btn-hero:hover {
+            background-color: #922f80;
+            /* más oscuro al hover */
+        }
+
+        /* Flechas de navegación */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #FFFFFF;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+            /* Asegura que estén encima de los slides */
+        }
+
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
+
+        /* Indicadores circulares */
+        .circles {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 0.5rem;
+        }
+
+        .circles div {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .circles div.active {
+            background-color: #FFFFFF;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide h1 {
+                font-size: 2rem;
+            }
+
+            .slide .btn-hero {
+                font-size: 1rem;
+                padding: 0.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <a href="home.html">
+                <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="terapias.html">Terapias</a></li>
+                <li><a href="talleres.html">Talleres</a></li>
+                <!-- <li>
+                    <button aria-label="Abrir menú" class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </li>
+            -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Carrusel -->
+        <div class="carrusel-container">
+
+            <!-- Flechas -->
+            <div class="arrow arrow-left">&#10094;</div>
+            <div class="arrow arrow-right">&#10095;</div>
+
+            <!-- Slides -->
+            <div class="slide active" style="background-image: url('assets/infantes.jpeg');">
+                <h1>Terapia para niños y jóvenes</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <div class="slide" style="background-image: url('assets/adulto.jpeg');">
+                <h1>Terapia para adultos</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <div class="slide" style="background-image: url('assets/parejas.jpeg');">
+                <h1>Terapia para parejas</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <div class="slide" style="background-image: url('assets/sexologia.jpeg');">
+                <h1>Sexología</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <div class="slide" style="background-image: url('assets/drogodependencia.jpeg');">
+                <h1>Drogodependencia</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <div class="slide" style="background-image: url('assets/deportiva.jpeg');">
+                <h1>Terapia deportiva</h1>
+                <button class="btn-hero">Reserva tu cita</button>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="circles">
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li>
+                    <a href="https://wa.me/34681013942" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        +34 681 013 942
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:pharos.vg@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        pharos.vg@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/pharos_vg" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        @pharos_vg
+                    </a>
+                </li>
+            </ul>
+            <p class="footer-copy">2025 · Pharos, centro de psicología</p>
+        </div>
+    </footer>
+
+    <script>
+        // JS básico para el carrusel
+        const slides = document.querySelectorAll('.slide');
+        const circles = document.querySelectorAll('.circles div');
+        const leftArrow = document.querySelector('.arrow-left');
+        const rightArrow = document.querySelector('.arrow-right');
+        let current = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                circles[i].classList.remove('active');
+                if (i === index) slide.classList.add('active');
+                if (i === index) circles[i].classList.add('active');
+            });
+            current = index;
+        }
+
+        // Flechas
+        leftArrow.addEventListener('click', () => {
+            let next = current - 1;
+            if (next < 0) next = slides.length - 1;
+            showSlide(next);
+        });
+        rightArrow.addEventListener('click', () => {
+            let next = current + 1;
+            if (next >= slides.length) next = 0;
+            showSlide(next);
+        });
+
+        // Indicadores
+        circles.forEach((circle, i) => {
+            circle.addEventListener('click', () => showSlide(i));
+        });
+    </script>
+</body>
+
+</html>
