@@ -175,17 +175,6 @@
         opacity: 0.9;
     }
 
-    /* --- Responsive --- */
-    @media (max-width: 768px) {
-        .ofrecemos-container ul {
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .ofrecemos-container button {
-            width: 100%;
-        }
-    }
 
 
     /*Section 3 Home - ¿Por qué somos tu mejor opción?*/
@@ -316,12 +305,71 @@
         font-size: 1rem;
     }
 
+
+
     /* Responsive para móvil */
     @media (max-width: 900px) {
+
         .final-content {
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+
+        .home-hero::before {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-container {
+            padding: 50px;
+            z-index: 2;
+            width: 100%;
+        }
+
+        h1.hero-titulo {
+            font-size: 26pt;
+        }
+
+        p.hero-big-text {
+            font-size: 20px;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        .ofrecemos-container {
+            gap: 0rem;
+        }
+
+        .ofrecemos-container h2 {
+            font-size: 20pt;
+        }
+
+        .home-ofrecemos {
+            padding: 1rem 2rem;
+        }
+
+        .opcion-container {
+            padding: 1rem 2rem;
+        }
+
+        .home-opcion h2 {
+            font-size: 20pt;
+            margin-bottom: 1rem;
+        }
+
+        .home-final {
+            padding: 1rem 2rem;
+        }
+
+        .final-titulo {
+            font-size: 20pt;
+            margin-bottom: 0rem;
+        }
+
+        .final-container h3 {
+            font-size: 1rem;
+            margin-bottom: 0rem;
+            margin-top: 0;
         }
 
         .texto1,
@@ -344,20 +392,19 @@
                 <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
             </a>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
-                <li><a href="quienes_somos.html">Quiénes somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="talleres.html">Quiénes somos</a></li>
+                <li><a href="talleres.html">Contacto</a></li>
                 <li><a href="terapias.html">Terapias</a></li>
                 <li><a href="talleres.html">Talleres</a></li>
-                <!-- <li>
-                    <button aria-label="Abrir menú" class="menu-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </li>
-            -->
             </ul>
+            <button aria-label="Abrir menú" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
     </header>
 

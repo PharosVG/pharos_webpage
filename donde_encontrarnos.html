@@ -15,23 +15,22 @@
 
 <style>
     /* Sección principal */
-.home-donde {
-    background-image: url("assets/campo_futbol.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #FFFFFF;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px; 
-    padding-bottom: 100px; 
-}
+    .home-donde {
+        background-image: url("assets/campo_futbol.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
 
     /* Contenedor centralizado */
     .donde-container {
-        max-width: 1200px;
         margin: 0 auto;
         display: flex;
         gap: 3rem;
@@ -70,6 +69,10 @@
     @media (max-width: 900px) {
         .donde-container {
             flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+
+
         }
 
         .donde-mapa,
@@ -81,26 +84,26 @@
 
 <body>
 
+
     <header>
         <nav class="top-nav">
             <a href="index.html">
                 <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
             </a>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
-                <li><a href="quienes_somos.html">Quiénes somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="talleres.html">Quiénes somos</a></li>
+                <li><a href="talleres.html">Contacto</a></li>
                 <li><a href="terapias.html">Terapias</a></li>
                 <li><a href="talleres.html">Talleres</a></li>
-                <!-- <li>
-                    <button aria-label="Abrir menú" class="menu-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </li>
-            -->
             </ul>
+            <button aria-label="Abrir menú" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
     </header>
 
