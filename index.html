@@ -391,22 +391,23 @@
             <a href="index.html">
                 <img src="assets/logo_Blanco.png" alt="Pharos Logo" class="logo">
             </a>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
-                <li><a href="talleres.html">Quiénes somos</a></li>
-                <li><a href="talleres.html">Contacto</a></li>
+                <li><a href="construccion.html">Quiénes somos</a></li>
+                <li><a href="construccion.html">Contacto</a></li>
                 <li><a href="terapias.html">Terapias</a></li>
-                <li><a href="talleres.html">Talleres</a></li>
+                <li><a href="construccion.html">Talleres</a></li>
             </ul>
+
             <button aria-label="Abrir menú" class="menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
         </nav>
     </header>
+
 
     <main>
         <section class="home-hero">
@@ -418,7 +419,7 @@
                     <strong> seguro</strong> donde parar, poner en palabras
                     lo que sentimos y recuperar la <strong>dirección</strong>.
                 </p>
-                <a class="btn-hero" href="contacto.html">Contáctanos</a>
+                <a class="btn-hero" href="construccion.html">Contáctanos</a>
             </div>
         </section>
 
@@ -427,17 +428,17 @@
                 <h2 class="ofrecemos-titulo">En Pharos te ofrecemos...</h2>
                 <h3>Terapias</h3>
                 <ul>
-                    <li><button class="btn-rosa">Infanto-juvenil</button></li>
-                    <li><button class="btn-rosa">Adulto/a</button></li>
-                    <li><button class="btn-rosa">Parejas</button></li>
-                    <li><button class="btn-rosa">Sexología</button></li>
-                    <li><button class="btn-rosa">Drogodependencia</button></li>
-                    <li><button class="btn-verde">Deportiva</button></li>
+                    <li><button class="btn-rosa" id="btn-infante">Infanto-juvenil</button></li>
+                    <li><button class="btn-rosa" id="btn-adulto">Adulto/a</button></li>
+                    <li><button class="btn-rosa" id="btn-pareja">Parejas</button></li>
+                    <li><button class="btn-rosa" id="btn-sexologia">Sexología</button></li>
+                    <li><button class="btn-rosa" id="btn-drogodependencia">Drogodependencia</button></li>
+                    <li><button class="btn-verde" id="btn-deporte">Deportiva</button></li>
                 </ul>
                 <h3>Talleres</h3>
                 <ul>
-                    <li><button class="btn-marron">Lorem Ipsum</button></li>
-                    <li><button class="btn-marron">Lorem Ipsum</button></li>
+                    <li><button class="btn-marron" id="btn-taller1">Próximamente</button></li>
+                    <li><button class="btn-marron" id="btn-taller2">Próximamente</button></li>
                 </ul>
             </div>
         </section>
@@ -528,6 +529,7 @@
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

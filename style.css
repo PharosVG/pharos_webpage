@@ -151,7 +151,7 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         width: 24px;
-        height: 18px;
+        height: 19px;
         padding: 0;
     }
 
@@ -166,6 +166,35 @@ footer {
 
     .menu-btn:hover span {
         background-color: #1A3642;
+    }
+
+    header.menu-open {
+    background-color: rgba(61, 110, 138, 0.95) !important;
+}
+
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(61, 110, 138, 0.95);
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 1.2rem;
     }
 
 }
