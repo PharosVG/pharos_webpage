@@ -15,107 +15,126 @@
 
 <style>
     .home-quienes-somos {
-        background-image: url('assets/fondo-quienes.jpg');
-        /* tu imagen */
+        background-image: url("assets/fondo-quienes.jpg");
+        /* cambia el nombre si hace falta */
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        padding: 6rem 2rem;
+        padding: 100px 40px;
+        color: #fff;
         position: relative;
-        color: #F7F1E8;
-        /* texto blanco cálido */
     }
 
-    /* Contenedor centralizado */
+    /* Oscurecer un poco el fondo para legibilidad */
+    .home-quienes-somos::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
     .quienes-container {
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        gap: 3rem;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 60% 33%;
+        gap: 80px;
+        align-items: start;
     }
 
-    /* Texto descriptivo */
+    /* ---------------- TEXTO IZQUIERDA ---------------- */
     .quienes-texto {
-        flex: 1;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        background-color: rgba(26, 54, 66, 0.7);
-        /* ligero overlay para que el texto resalte */
-        padding: 2rem;
-        border-radius: 15px;
-    }
-
-    /* Perfil vertical */
-    .quienes-perfiles {
-        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        justify-content: space-between;
+        height: 100%;
     }
 
-    /* Cada perfil */
+    .quienes-texto p {
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .texto1 {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .texto2 {
+        font-size: 1rem;
+        opacity: 0.95;
+    }
+
+    /* ---------------- PERFILES DERECHA ---------------- */
+
+    .quienes-perfiles {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
     .perfil {
-        background-color: rgba(61, 110, 138, 0.85);
-        /* overlay azul semitransparente */
-        border-radius: 15px;
-        padding: 1.5rem;
+        text-decoration: none;
+        color: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-decoration: none;
-        color: #F7F1E8;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
     }
 
-    .perfil:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Imagen circular */
+    /* Foto circular */
     .perfil img {
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 1rem;
+        margin-bottom: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
     }
 
     /* Nombre */
     .perfil h4 {
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 0px;
     }
 
-    /* Descripción */
+    /* Texto descriptivo */
     .perfil p {
-        font-size: 1rem;
-        text-align: center;
-        line-height: 1.4;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        opacity: 0.9;
     }
 
-    /* Responsive */
+    /* ---------------- BOTÓN SOBRE MÍ ---------------- */
+
+    .btn-sobremi {
+        padding: 8px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-sobremi:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+
     @media (max-width: 900px) {
         .quienes-container {
-            flex-direction: column;
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 80px;
         }
 
-        .quienes-texto,
-        .quienes-perfiles {
-            width: 100%;
-        }
-
-        .quienes-perfiles {
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        .perfil {
-            width: 45%;
+        .quienes-texto {
+            text-align: center;
         }
     }
 </style>
@@ -130,7 +149,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="donde_encontrarnos.html">Dónde encontrarnos</a></li>
-                <li><a href="construccion.html">Quiénes somos</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
                 <li><a href="construccion.html">Contacto</a></li>
                 <li><a href="terapias.html">Terapias</a></li>
                 <li><a href="construccion.html">Talleres</a></li>
@@ -150,23 +169,43 @@
         <section class="home-quienes-somos">
             <div class="quienes-container">
                 <div class="quienes-texto">
-                    <p>
-                        Pharos nace en 2024 en la ciudad de Barcelona. Dos compañeros de la universidad decidimos...
+                    <p class="texto1">
+                        En 2025 dos compañeros de la universidad tomamaos la decisión
+                        de convertir nuestros proyectos indivicuales en <strong>Pharos</strong>:
+                        un entorno profesional en el que la psicologa es más accesible, cercana,
+                        humana y centrada en el acompañamiento.
+                    </p>
+                    <p class="texto2">
+                        Un espacio seguro para hallar dirección y restablecer el bienestar
+                        emocional. Una clínica creada para iluminar caminos, cuidar provesos
+                        y brondar un apoyo profesional y respetuoso, pero sobre todo para tratar
+                        a personas, no a trastornos. <strong>Porque detrás de cada síntoma hay
+                            una historia, una emoción y un proceso que merece ser escuchado.</strong>
                     </p>
                 </div>
 
                 <div class="quienes-perfiles">
-                    <a href="perfil1.html" class="perfil">
-                        <img src="assets/perfil1.jpg" alt="Nombre Psicólogo 1">
-                        <h4>Nombre Psicólogo 1</h4>
-                        <p>Breve descripción de la persona y su especialidad.</p>
-                    </a>
+                    <div class="perfil">
+                        <img src="assets/vicente.jpeg" alt="Vicente Moliner">
+                        <h4>Vicente Moliner</h4>
+                        <p>
+                            Profesional de la salud mental que combina cercanía, rigor
+                            y una mirada profuncamente humana para acompañar procesos de
+                            cambio real.
+                        </p>
+                        <a href="perfil_vicente.html" class="btn-sobremi">Sobre mí</a>
+                    </div>
 
-                    <a href="perfil2.html" class="perfil">
-                        <img src="assets/perfil2.jpg" alt="Nombre Psicólogo 2">
-                        <h4>Nombre Psicólogo 2</h4>
-                        <p>Breve descripción de la persona y su especialidad.</p>
-                    </a>
+                    <div class="perfil">
+                        <img src="assets/gabi_perfil.jpeg" alt="gabriel Rovira">
+                        <h4>Gabriel Rovira</h4>
+                        <p>
+                            Psicólogo deportivo y clínico, mental coaching y experto
+                            en alto rendimiento. Entrena tu mente para rendir mejor
+                            y vivir con más sentido.
+                        </p>
+                        <a href="perfil_gabi.html" class="btn-sobremi">Sobre mí</a>
+                    </div>
                 </div>
             </div>
         </section>
