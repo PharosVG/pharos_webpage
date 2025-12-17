@@ -62,7 +62,7 @@
 
     h1.hero-titulo {
         font-weight: normal;
-        font-size: 38pt;
+        font-size: 45pt;
         margin-bottom: auto;
     }
 
@@ -106,7 +106,7 @@
         /* fondo azul medio */
         color: #F7F1E8;
         /* texto blanco cálido */
-        padding: 5rem 2rem;
+        padding: 3rem 2rem 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -226,10 +226,10 @@
 
     /*Section 4 Home - Cita de Frank*/
     .home-final {
-        background-color: #3D6E8A;
+        background-color: #1a3642;
         /* fondo azul */
         color: #F7F1E8;
-        padding: 5rem 2rem;
+        padding: 5rem 2rem 3rem;
         display: flex;
         justify-content: center;
     }
@@ -309,7 +309,8 @@
 
     .home-profesionales {
         /* ajusta al color que uses */
-        padding: 80px 20px;
+        padding: 3rem 2rem 5rem;
+        background-color: #1a3642;
     }
 
     .profesionales-container {
@@ -320,6 +321,8 @@
     .home-profesionales h2 {
         color: #fff;
         margin-bottom: 60px;
+        font-weight: normal;
+        font-size: 25pt;
     }
 
     /* Bloque general de cada profesional */
@@ -466,6 +469,23 @@
         .profesional.gabriel>p {
             grid-column: auto;
         }
+
+        .opcion-container {
+            width: 100%;
+        }
+
+        .profesional {
+            gap: 0px;
+            padding-right: 0px;
+            flex-direction: column;
+        }
+
+        .profesional.gabriel {
+    padding-right: 0;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-bottom: 2rem;
+}
     }
 </style>
 
@@ -508,35 +528,6 @@
             </div>
         </section>
 
-        <section class="home-profesionales">
-            <div class="profesionales-container">
-                <h2>Conoce a nuestros profesionales</h2>
-                <div class="profesional vicente">
-                    <div class="perfil">
-                        <img src="assets/vicente.jpeg" alt="Vicente Moliner">
-                        <p>Vicente Moliner</p>
-                    </div>
-                    <p>
-                        Profesional de la salud mental que combina cercanía, rigor
-                        y una mirada profuncamente humana para acompañar procesos de
-                        cambio real.
-                    </p>
-                </div>
-                <div class="profesional gabriel">
-                    <div class="perfil">
-                        <img src="assets/gabi_perfil.jpeg" alt="Vicente Moliner">
-                        <p>Gabriel Rovira</p>
-                    </div>
-                    <p>
-                        Psicólogo deportivo y sanitario, mental coaching y experto
-                        en alto rendimiento. Entrena tu mente para rendir mejor
-                        y vivir con más sentido.
-                    </p>
-                </div>
-                <a class="btn-hero" href="quienes_somos.html">Descubre más sobre nosotros</a>
-            </div>
-        </section>
-
         <section class="home-ofrecemos">
             <div class="ofrecemos-container">
                 <h2 class="ofrecemos-titulo">En Pharos te ofrecemos...</h2>
@@ -555,6 +546,33 @@
                     <li><button class="btn-talleres" id="btn-taller1">Próximamente</button></li>
                     <li><button class="btn-talleres" id="btn-taller2">Próximamente</button></li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="home-profesionales">
+            <div class="profesionales-container">
+                <h2>Conoce a nuestros profesionales</h2>
+                <div class="profesional vicente">
+                    <div class="perfil">
+                        <img src="assets/vicente.jpeg" alt="Vicente Moliner">
+                        <p>Vicente Moliner</p>
+                    </div>
+                    <p>
+                        Para mí, cada proceso es único, y mi función es caminar a tu lado mientras recuperas claridad,
+                        estabilidad y bienestar. Entender a la persona más allá del síntoma.
+                    </p>
+                </div>
+                <div class="profesional gabriel">
+                    <div class="perfil">
+                        <img src="assets/gabi_perfil.jpeg" alt="Vicente Moliner">
+                        <p>Gabriel Rovira Carrascosa</p>
+                    </div>
+                    <p>
+                        Mi trabajo consiste en ayudarte a construir una mente más fuerte, flexible y consciente, capaz
+                        de sostener tanto la presión competitiva como los retos personales del día a día.
+                    </p>
+                </div>
+                <a class="btn-hero" href="quienes_somos.html">Descubre más sobre nosotros</a>
             </div>
         </section>
 
@@ -623,13 +641,13 @@
                 <li>
                     <a href="https://wa.me/34681013942" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
-                        +34 681 013 942
+                        Contacta con Gabriel
                     </a>
                 </li>
                 <li>
                     <a href="https://wa.me/34638248597" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
-                        +34 638 248 597
+                        Contacta con Vicente
                     </a>
                 </li>
                 <li>

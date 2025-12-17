@@ -20,6 +20,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.2);
+        /* oscurece */
+        background-blend-mode: darken;
         color: #FFFFFF;
         min-height: 100vh;
         display: flex;
@@ -27,6 +30,7 @@
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
 
 
     /* Contenedor centralizado */
@@ -52,7 +56,6 @@
     .donde-texto {
         flex: 1;
         min-width: 300px;
-        background-color: rgba(26, 54, 66, 0.7);
         /* overlay oscuro para resaltar texto */
         padding: 2rem;
         border-radius: 15px;
@@ -62,7 +65,11 @@
 
     /* Títulos dentro del texto */
     .donde-texto h3 {
-        margin-top: 0;
+        margin-top: 3rem;
+    }
+
+    .direccion {
+        font-size: 20pt;
     }
 
     /* Responsive */
@@ -122,9 +129,8 @@
 
                 <!-- Texto con dirección e indicaciones -->
                 <div class="donde-texto">
-                    <h3>Dirección</h3>
-                    <p>Passeig de Llorenç Serra, 8</p>
-                    <p>08921 Santa Coloma de Gramenet</p>
+                    <p class="direccion">Passeig de Llorenç Serra, 8</p>
+                    <p class="direccion">08921 Santa Coloma de Gramenet</p>
 
                     <h3>¿Cómo llegar?</h3>
                     <p>Metro: L1 Estación Santa Coloma o L9 Norte Església Major</p>
@@ -142,13 +148,13 @@
                 <li>
                     <a href="https://wa.me/34681013942" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
-                        +34 681 013 942
+                        Contacta con Gabriel
                     </a>
                 </li>
                 <li>
                     <a href="https://wa.me/34638248597" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
-                        +34 638 248 597
+                        Contacta con Vicente
                     </a>
                 </li>
                 <li>
