@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/logo_temp.jpeg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
 </head>
 
@@ -30,7 +31,6 @@
         display: flex;
         flex-direction: column;
     }
-
 
     /*HOME */
 
@@ -111,6 +111,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-bottom: 2rem;
+
     }
 
     .ofrecemos-container {
@@ -305,7 +307,16 @@
         font-size: 1rem;
     }
 
+    .final-lista a {
+        text-decoration: none;
+        color: #F7F1E8;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
 
+    .final-lista a:hover {
+        color: #a7c1e4;
+    }
 
     .home-profesionales {
         /* ajusta al color que uses */
@@ -481,11 +492,11 @@
         }
 
         .profesional.gabriel {
-    padding-right: 0;
-    flex-direction: column;
-    padding-left: 0px;
-    margin-bottom: 2rem;
-}
+            padding-right: 0;
+            flex-direction: column;
+            padding-left: 0px;
+            margin-bottom: 2rem;
+        }
     }
 </style>
 
@@ -516,43 +527,52 @@
 
     <main>
         <section class="home-hero">
-            <div class="hero-container">
-                <h1 class="hero-titulo">Foco en lo esencial</h1>
-                <p class="hero-mini-text">Te acompañamos para que puedas alcanzar tu mejor versión, sin ruido.</p>
-                <p class="hero-big-text">
+            <div class="hero-container" data-aos="zoom-in" data-aos-duration="1200">
+                <h1 class="hero-titulo" data-aos="zoom-in" data-aos-duration="1200">Foco en lo esencial</h1>
+                <p class="hero-mini-text" data-aos="zoom-in" data-aos-delay="150">Te acompañamos para que puedas
+                    alcanzar tu mejor versión, sin ruido.</p>
+                <p class="hero-big-text" data-aos="zoom-in" data-aos-delay="300">
                     Creamos un espacio <strong> cálido</strong> y
                     <strong> seguro</strong> donde parar, poner en palabras
                     lo que sentimos y recuperar la <strong>dirección</strong>.
                 </p>
-                <a class="btn-hero" href="construccion.html">Contáctanos</a>
+                <a class="btn-hero" href="construccion.html" data-aos="zoom-in" data-aos-delay="450">Contáctanos</a>
             </div>
         </section>
 
+
         <section class="home-ofrecemos">
             <div class="ofrecemos-container">
-                <h2 class="ofrecemos-titulo">En Pharos te ofrecemos...</h2>
-                <h3>Terapias</h3>
+                <h2 class="ofrecemos-titulo" data-aos="zoom-out">En Pharos te ofrecemos...</h2>
+
+                <h3 data-aos="fade-up" data-aos-delay="100">Terapias</h3>
                 <ul>
-                    <li><button class="btn-terapia" id="btn-infante">Infanto-juvenil</button></li>
-                    <li><button class="btn-terapia" id="btn-adulto">Adulto/a</button></li>
-                    <li><button class="btn-terapia" id="btn-pareja">Parejas</button></li>
-                    <li><button class="btn-terapia" id="btn-sexologia">Sexología</button></li>
-                    <li><button class="btn-terapia" id="btn-drogodependencia">Drogodependencia</button></li>
-                    <li><button class="btn-terapia" id="btn-alimentacion">Trastorno Alimenticio</button></li>
-                    <li><button class="btn-deportiva" id="btn-deporte">Deportiva</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia" id="btn-infante">Infanto-juvenil</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia" id="btn-adulto">Adulto/a</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia" id="btn-pareja">Parejas</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia" id="btn-sexologia">Sexología</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia"
+                            id="btn-drogodependencia">Drogodependencia</button></li>
+                    <li data-aos="zoom-in"><button class="btn-terapia" id="btn-alimentacion">Trastorno
+                            Alimenticio</button></li>
+                    <li data-aos="zoom-in"><button class="btn-deportiva" id="btn-deporte">Deportiva</button></li>
                 </ul>
-                <h3>Talleres</h3>
+
+                <h3 data-aos="fade-up" data-aos-delay="200">Talleres</h3>
                 <ul>
-                    <li><button class="btn-talleres" id="btn-taller1">Próximamente</button></li>
-                    <li><button class="btn-talleres" id="btn-taller2">Próximamente</button></li>
+                    <li data-aos="fade-up" data-aos-delay="300"><button class="btn-talleres"
+                            id="btn-taller1">Próximamente</button></li>
+                    <li data-aos="fade-up" data-aos-delay="400"><button class="btn-talleres"
+                            id="btn-taller2">Próximamente</button></li>
                 </ul>
             </div>
         </section>
 
         <section class="home-profesionales">
-            <div class="profesionales-container">
-                <h2>Conoce a nuestros profesionales</h2>
-                <div class="profesional vicente">
+            <div class="profesionales-container" data-aos="fade-up">
+                <h2 data-aos="fade-up" data-aos-delay="100">Conoce a nuestros profesionales</h2>
+
+                <div class="profesional vicente" data-aos="zoom-in-right" data-aos-duration="1200">
                     <div class="perfil">
                         <img src="assets/vicente.jpeg" alt="Vicente Moliner">
                         <p>Vicente Moliner</p>
@@ -562,7 +582,8 @@
                         estabilidad y bienestar. Entender a la persona más allá del síntoma.
                     </p>
                 </div>
-                <div class="profesional gabriel">
+
+                <div class="profesional gabriel" data-aos="zoom-in-left" data-aos-duration="1200">
                     <div class="perfil">
                         <img src="assets/gabi_perfil.jpeg" alt="Vicente Moliner">
                         <p>Gabriel Rovira Carrascosa</p>
@@ -572,60 +593,65 @@
                         de sostener tanto la presión competitiva como los retos personales del día a día.
                     </p>
                 </div>
-                <a class="btn-hero" href="quienes_somos.html">Descubre más sobre nosotros</a>
+
+                <a class="btn-hero" href="quienes_somos.html" data-aos="fade-up" data-aos-delay="200">
+                    Descubre más sobre nosotros
+                </a>
             </div>
         </section>
 
         <section class="home-opcion">
             <div class="opcion-container">
-                <h2>¿Por qué somos tu mejor opción?</h2>
+                <h2 data-aos="fade-up">¿Por qué somos tu mejor opción?</h2>
                 <ul>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="100">
                         <p><strong>✓ </strong>Te ofrecemos un espacio seguro donde poder expresarte sin miedos.</p>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="200">
                         <p><strong>✓ </strong>Priorizamos la transparencia, la cercanía y la calidez, para tu comodidad.
                         </p>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="300">
                         <p><strong>✓ </strong>Te ayudamos a transformar las dificultades en oportunidades de mejora.</p>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="400">
                         <p><strong>✓ </strong>Te acompañamos a encontrar equilibrio en tu vida y potenciar tus
                             fortalezas.</p>
                     </li>
-                    <li>
-                        <p><strong>✓ </strong>Combinamos psicología sanitaria y deportiva en un mismo espacio.</p>
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <p><strong>✓ </strong>Combinamos psicología clínica y deportiva en un mismo espacio.</p>
                     </li>
                 </ul>
             </div>
         </section>
 
         <section class="home-final">
-            <div class="final-container">
-                <h2 class="final-titulo">
-                    "Cuando ya no podemos cambiar una <strong>situación</strong>,
+            <div class="final-container" data-aos="fade-up">
+                <h2 class="final-titulo" data-aos="fade-up"> "Cuando ya no podemos cambiar una
+                    <strong>situación</strong>,
                     tenemos el desafío de cambiarnos a <strong>nosotros</strong> mismos."
                 </h2>
-                <h3>Viktor <strong>Frank</strong></h3>
+                <h3 data-aos="fade-up" data-aos-delay="150">Viktor <strong>Frank</strong></h3>
 
-                <div class="faro-zona">
+                <div class="faro-zona" data-aos="zoom-in" data-aos-delay="300">
                     <div class="final-content">
-                        <p class="texto1">
-                            Centro de soporte psicológico para infantes,
+                        <p class="texto1" data-aos="fade-up" data-aos-delay="450"> Centro de soporte psicológico para
+                            infantes,
                             jóvenes, adultos y deportistas. Ayuda y apoyo en
-                            el crecimiento y el rendimiento deportivo.
-                        </p>
-                        <div class="imagen">
-                            <img src="assets/logo_Blanco_faro.png" alt="Imagen del Faro">
+                            el crecimiento y el rendimiento deportivo.</p>
+
+                        <div class="imagen" data-aos="zoom-in" data-aos-delay="600">
+                            <img src="assets/logo_Blanco_faro.png">
                         </div>
 
                         <ul class="final-lista">
-                            <li>Terapias</li>
-                            <li>Talleres</li>
-                            <li>Quiénes somos</li>
-                            <li>Dónde encontrarnos</li>
-                            <li>Contacto</li>
+                            <li data-aos="fade-left" data-aos-delay="650"><a href="terapias.html">Terapias</a></li>
+                            <li data-aos="fade-left" data-aos-delay="700"><a href="construccion.html">Talleres</a></li>
+                            <li data-aos="fade-left" data-aos-delay="750"><a href="quienes_somos.html">Quiénes somos</a>
+                            </li>
+                            <li data-aos="fade-left" data-aos-delay="800"><a href="donde_encontrarnos.html">Dónde
+                                    encontrarnos</a></li>
+                            <li data-aos="fade-left" data-aos-delay="850"><a href="construccion.html">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -668,6 +694,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
